@@ -1,3 +1,11 @@
+int calculateHypoDimentionProduct(const int *arrayOfDimensions, const int indexPosition){
+	int hypoDimensionsProduct = 1;
+	for(int i = 0; i < indexPosition; i++){
+		hypoDimensionsProduct *= arrayOfDimensions[i];
+	}
+	return hypoDimensionsProduct;
+}
+
 int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts){
 	return arrayOfSubscripts[0] * arrayOfDimensions[1] + arrayOfSubscripts[1];	
 }
@@ -8,10 +16,7 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
 	value += sub2ind2D(arrayOfDimensions, arrayOfSubscripts);  
 	if(subscript > 1){
 		for(int i = subscript; i > 1; i--){
-			int hypoDimensionsProduct = 1;
-			for(int k = 0; k < i; k++){
-				hypoDimensionsProduct *= arrayOfDimensions[k];
-			}
+			int hypoDimensionsProduct = calculateHypoDimentionProduct(arrayOfDimensions, i);
 			value += arrayOfSubscripts[i] * hypoDimensionsProduct; 
 		}
 	}
@@ -29,9 +34,7 @@ void ind2sub(const int *arrayOfDimensions, const int arraySize, const int index,
 		ind2sub2D(arrayOfDimensions, index, convertedIndex);
 	}else{
 		int hypoDimensionsProduct = 1;
-		for(int i = 0; i < subscript; i++){
-			hypoDimensionsProduct *= arrayOfDimensions[i];
-		}
+		hypoDimensionsProduct *= calculateHypoDimentionProduct(arrayOfDimensions, subscript);
 		convertedIndex[subscript] = index / hypoDimensionsProduct;	
 		int newIndex = index % hypoDimensionsProduct;
 		ind2sub(arrayOfDimensions, subscript, newIndex, convertedIndex);
