@@ -1,3 +1,7 @@
+int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts){
+	return arrayOfSubscripts[0] * arrayOfDimensions[1] + arrayOfSubscripts[1];	
+}
+
 void ind2sub2D(const int *arrayOfDimensions, const int index, int convertedIndex[]){
 	convertedIndex[1] = index % arrayOfDimensions[1];
 	convertedIndex[0] = index / arrayOfDimensions[1];
