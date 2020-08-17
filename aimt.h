@@ -2,6 +2,22 @@ int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts){
 	return arrayOfSubscripts[0] * arrayOfDimensions[1] + arrayOfSubscripts[1];	
 }
 
+int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int arraySize){
+	int subscript = arraySize - 1;
+	int value = 0;
+	value += sub2ind2D(arrayOfDimensions, arrayOfSubscripts);  
+	if(subscript > 1){
+		for(int i = subscript; i > 1; i--){
+			int hypoDimensionsProduct = 1;
+			for(int k = 0; k < i; k++){
+				hypoDimensionsProduct *= arrayOfDimensions[k];
+			}
+			value += arrayOfSubscripts[i] * hypoDimensionsProduct; 
+		}
+	}
+	return value;
+}
+
 void ind2sub2D(const int *arrayOfDimensions, const int index, int convertedIndex[]){
 	convertedIndex[1] = index % arrayOfDimensions[1];
 	convertedIndex[0] = index / arrayOfDimensions[1];
