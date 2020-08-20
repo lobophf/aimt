@@ -101,8 +101,7 @@ void ind2sub(const int *arrayOfDimensions, const int arraySize, const int index,
 	if(subscript < 2){
 		ind2sub2D(arrayOfDimensions, index, convertedIndex);
 	}else{
-		int hypoDimensionsProduct = 1;
-		hypoDimensionsProduct *= calculateHypoDimensionsProduct(arrayOfDimensions, subscript);
+		int hypoDimensionsProduct = calculateHypoDimensionsProduct(arrayOfDimensions, subscript);
 		convertedIndex[subscript] = index / hypoDimensionsProduct;	
 		int newIndex = index % hypoDimensionsProduct;
 		ind2sub(arrayOfDimensions, subscript, newIndex, convertedIndex);
