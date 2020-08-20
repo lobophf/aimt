@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int calculateDimensionsProduct(const int *arrayOfDimensions, const int indexPosition){
+int calculateDimensionsProduct(const int *arrayOfDimensions, const int subscriptPosition){
 	int dimensionsProduct = 1;
-	for(int i = 0; i < indexPosition; i++){
+	for(int i = 0; i < subscriptPosition; i++){
 		dimensionsProduct *= arrayOfDimensions[i];
 	}
 	return dimensionsProduct;
@@ -67,11 +67,11 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
 		callErrorMessage(3);
 		exit(EXIT_FAILURE);
 	}
-	int subscript = dimensions - 1;
+	int subscriptPosition = dimensions - 1;
 	int value = 0;
 	value += sub2ind2D(arrayOfDimensions, arrayOfSubscripts);  
-	if(subscript > 1){
-		for(int i = subscript; i > 1; i--){
+	if(subscriptPosition > 1){
+		for(int i = subscriptPosition; i > 1; i--){
 			int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, i);
 			value += arrayOfSubscripts[i] * hypoDimensionsProduct; 
 		}
@@ -97,13 +97,13 @@ void ind2sub(const int *arrayOfDimensions, const int dimensions, const int index
 		callErrorMessage(3);
 		exit(EXIT_FAILURE);
 	}
-	int subscript = dimensions - 1;
-	if(subscript < 2){
+	int subscriptPosition = dimensions - 1;
+	if(subscriptPosition < 2){
 		ind2sub2D(arrayOfDimensions, index, convertedIndex);
 	}else{
-		int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, subscript);
-		convertedIndex[subscript] = index / hypoDimensionsProduct;	
+		int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, subscriptPosition);
+		convertedIndex[subscriptPosition] = index / hypoDimensionsProduct;	
 		int newIndex = index % hypoDimensionsProduct;
-		ind2sub(arrayOfDimensions, subscript, newIndex, convertedIndex);
+		ind2sub(arrayOfDimensions, subscriptPosition, newIndex, convertedIndex);
 	}
 }
