@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int calculateHypoDimensionsProduct(const int *arrayOfDimensions, const int indexPosition){
-	int hypoDimensionsProduct = 1;
+int calculateDimensionsProduct(const int *arrayOfDimensions, const int indexPosition){
+	int dimensionsProduct = 1;
 	for(int i = 0; i < indexPosition; i++){
-		hypoDimensionsProduct *= arrayOfDimensions[i];
+		dimensionsProduct *= arrayOfDimensions[i];
 	}
-	return hypoDimensionsProduct;
+	return dimensionsProduct;
 }
 
 void callErrorMessage(int errorNumber){
@@ -42,7 +42,7 @@ int isValidArrayOfSubscripts(const int *arrayOfDimensions, const int *arrayOfSub
 }
 
 int isValidIndex(const int *arrayOfDimensions, const int index, const int arraySize){
-	int maxValue = calculateHypoDimensionsProduct(arrayOfDimensions, arraySize) - 1;
+	int maxValue = calculateDimensionsProduct(arrayOfDimensions, arraySize) - 1;
 	if(index < 0 || index > maxValue){
 		return 0;
 	}
@@ -72,7 +72,7 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
 	value += sub2ind2D(arrayOfDimensions, arrayOfSubscripts);  
 	if(subscript > 1){
 		for(int i = subscript; i > 1; i--){
-			int hypoDimensionsProduct = calculateHypoDimensionsProduct(arrayOfDimensions, i);
+			int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, i);
 			value += arrayOfSubscripts[i] * hypoDimensionsProduct; 
 		}
 	}
@@ -101,7 +101,7 @@ void ind2sub(const int *arrayOfDimensions, const int arraySize, const int index,
 	if(subscript < 2){
 		ind2sub2D(arrayOfDimensions, index, convertedIndex);
 	}else{
-		int hypoDimensionsProduct = calculateHypoDimensionsProduct(arrayOfDimensions, subscript);
+		int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, subscript);
 		convertedIndex[subscript] = index / hypoDimensionsProduct;	
 		int newIndex = index % hypoDimensionsProduct;
 		ind2sub(arrayOfDimensions, subscript, newIndex, convertedIndex);
