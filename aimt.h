@@ -10,7 +10,7 @@ int calculateDimensionsProduct(const int *arrayOfDimensions, const int subscript
 }
 
 void callErrorMessage(int errorNumber){
-switch(errorNumber){
+	switch(errorNumber){
 		case 1:
 		    printf("ERROR: The subscripts provide must be contained within a valid bound.");
 		    break;
