@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../aimt.h"
+#include "../src/aimt.h"
 
 /* 
 
