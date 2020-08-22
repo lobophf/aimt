@@ -1,5 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "dimensionsProduct.h"
+
+#ifndef ERRORSHANDLER_H
+#define ERRORSHANDLER_H
 
 void callErrorMessage(int errorNumber){
 	switch(errorNumber){
@@ -16,3 +20,29 @@ void callErrorMessage(int errorNumber){
 		    printf("Unknown error");
 	}
 }
+
+int isValidArraySize(const int dimensions){
+	if(dimensions < 2){
+		return 0; 
+	}
+	return 1;
+}
+
+int isValidArrayOfSubscripts(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
+	for(int i = 0; i < dimensions; i++){
+		if(arrayOfSubscripts[i] < 0 || arrayOfSubscripts[i] >= arrayOfDimensions[i]){
+			return 0;
+		}
+	}
+	return 1;
+}
+
+int isValidIndex(const int *arrayOfDimensions, const int index, const int dimensions){
+	int maxValue = calculateDimensionsProduct(arrayOfDimensions, dimensions) - 1;
+	if(index < 0 || index > maxValue){
+		return 0;
+	}
+	return 1;
+}
+
+#endif
