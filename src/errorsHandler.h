@@ -45,4 +45,25 @@ int isValidIndex(const int *arrayOfDimensions, const int index, const int dimens
 	return 1;
 }
 
+void inspectSubscripts(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
+	if(!isValidArrayOfSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions)){
+		callErrorMessage(1);
+		exit(EXIT_FAILURE);
+	}
+}
+
+void inspectIndex(int const *arrayOfDimensions, int const index, int const dimension){
+	if(!isValidIndex(arrayOfDimensions, index, dimension)){
+		callErrorMessage(2);
+		exit(EXIT_FAILURE);
+	}
+}
+
+void inspectArraySize(int const dimensions){
+	if(!isValidArraySize(dimensions)){
+		callErrorMessage(3);
+		exit(EXIT_FAILURE);
+	}
+}
+
 #endif
