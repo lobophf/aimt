@@ -1,36 +1,5 @@
-#include "errorMessages.h"
-
-int calculateDimensionsProduct(const int *arrayOfDimensions, const int subscriptPosition){
-	int dimensionsProduct = 1;
-	for(int i = 0; i < subscriptPosition; i++){
-		dimensionsProduct *= arrayOfDimensions[i];
-	}
-	return dimensionsProduct;
-}
-
-int isValidArraySize(const int dimensions){
-	if(dimensions < 2){
-		return 0; 
-	}
-	return 1;
-}
-
-int isValidArrayOfSubscripts(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
-	for(int i = 0; i < dimensions; i++){
-		if(arrayOfSubscripts[i] < 0 || arrayOfSubscripts[i] >= arrayOfDimensions[i]){
-			return 0;
-		}
-	}
-	return 1;
-}
-
-int isValidIndex(const int *arrayOfDimensions, const int index, const int dimensions){
-	int maxValue = calculateDimensionsProduct(arrayOfDimensions, dimensions) - 1;
-	if(index < 0 || index > maxValue){
-		return 0;
-	}
-	return 1;
-}
+#include "errorsHandler.h"
+#include "dimensionsProduct.h"
 
 int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts){
 	if(!isValidArrayOfSubscripts(arrayOfDimensions, arrayOfSubscripts, 2)){
