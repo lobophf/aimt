@@ -1,9 +1,9 @@
+#ifndef ERRORSHANDLER_H
+#define ERRORSHANDLER_H
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "dimensionsProduct.h"
-
-#ifndef ERRORSHANDLER_H
-#define ERRORSHANDLER_H
 
 void callErrorMessage(int errorNumber);
 int isValidArraySize(const int dimensions);
