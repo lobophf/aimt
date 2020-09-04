@@ -40,7 +40,7 @@ int main(){
 
 	printf("The linear index %d was converted"
 	       " to subscripts (%d, %d, %d) of a"
-	       " %dx%dx%d array.", index, sub[0], 
+	       " %dx%dx%d array.\n", index, sub[0], 
 	       sub[1], sub[2], arr[0], arr[1], 
 	       arr[2]);
 		       
