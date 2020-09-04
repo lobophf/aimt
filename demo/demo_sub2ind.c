@@ -43,7 +43,7 @@ int main(){
 
 	printf("The subscripts (%d, %d, %d) of a"
 	       " %dx%dx%d array was converted to"
-	       " linear index %d.", sub[0], sub[1], 
+	       " linear index %d.\n", sub[0], sub[1], 
 	       sub[2], arr[0], arr[1], arr[2], 
 	       linearIndex);
 
