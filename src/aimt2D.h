@@ -16,9 +16,12 @@
  *
  * @pre Each element of @paramname{arrayOfSubscripts} must fit in the each element of the
  * @paramname{arrayOfDimensions}.
+ *
+ * @note The @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} can have two 
+ * or more dimensions, but only the first two elements will be considered.
  * 
  * @warning Ensure that the @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
- * have two dimensions, in order to get a proper result.
+ * have the same dimensions, in order to get a proper result.
  */
 int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts);
 
@@ -34,9 +37,12 @@ int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts);
  * @pre The @paramname{index} must fit in the @paramname{arrayOfDimensions}.
  * @pre Each element of @paramname{arrayOfSubscripts} must fit in the each element of the
  * @paramname{arrayOfDimensions}.
+ *
+ * @note The @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} can have two 
+ * or more dimensions, but only the first two elements will be converted.
  * 
  * @warning Ensure that the @paramname{arrayOfDimensions} and @paramname{convertedIndex} 
- * have two dimensions, in order to get a proper result.
+ * have the same dimensions, in order to get a proper result.
  */
 void ind2sub2D(const int *arrayOfDimensions, const int index, int convertedIndex[]);
 
