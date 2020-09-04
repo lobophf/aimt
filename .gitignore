@@ -3,3 +3,7 @@ build
 
 # Ignore any executables
 bin
+
+# Ignore created doc files 
+docs/html
+docs/latex
