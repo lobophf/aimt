@@ -1,0 +1,5 @@
+# Ignore the build dirs
+build
+
+# Ignore any executables
+bin
