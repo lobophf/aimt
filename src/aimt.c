@@ -1,11 +1,5 @@
 #include "aimt.h"
 
-int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts){
-	inspectSubscripts(arrayOfDimensions, arrayOfSubscripts, 2);
-	int subscript = arrayOfSubscripts[0] * arrayOfDimensions[1] + arrayOfSubscripts[1];
-	return subscript;
-}
-
 int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
 	inspectSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions);
 	inspectArraySize(dimensions);
@@ -19,12 +13,6 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
 		}
 	}
 	return value;
-}
-
-void ind2sub2D(const int *arrayOfDimensions, const int index, int convertedIndex[]){
-	inspectIndex(arrayOfDimensions, index, 2);
-	convertedIndex[1] = index % arrayOfDimensions[1];
-	convertedIndex[0] = index / arrayOfDimensions[1];
 }
 
 void ind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]){  
