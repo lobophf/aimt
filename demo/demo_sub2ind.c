@@ -39,7 +39,7 @@ int main(){
 	int arrSize = sizeof(arr)/sizeof(arr[0]);
 
 	// converted subscript
-	int linearIndex = sub2ind(arr, sub, arrSize);
+	int linearIndex = sub2indFlip0(arr, sub, arrSize);
 
 	printf("The subscripts (%d, %d, %d) of a"
 	       " %dx%dx%d array was converted to"

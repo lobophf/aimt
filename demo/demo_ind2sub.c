@@ -36,7 +36,7 @@ int main(){
 	int size = sizeof(arr)/sizeof(arr[0]);
 
 	int sub[size];
-	ind2sub(arr, size, index, sub);
+	ind2subFlip0(arr, size, index, sub);
 
 	printf("The linear index %d was converted"
 	       " to subscripts (%d, %d, %d) of a"

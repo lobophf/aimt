@@ -6,7 +6,9 @@
 
 /**
  *
- * @brief A special two dimensions case that converts subscripts into linear indices. 
+ * @brief A special case of two dimensions array that converts subscripts into linear 
+ * indices. The linear index traverses columns, then rows, then higher dimensions. The 
+ * index starts from 0, and the subscripts start from (0, 0).
  *
  * @param[in] arrayOfDimensions where each element represents the number of rows and 
  * columns respectively.
@@ -23,11 +25,13 @@
  * @warning Ensure that the @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * have the same dimensions, in order to get a proper result.
  */
-int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts);
+int sub2ind2DFlip0(const int *arrayOfDimensions, const int *arrayOfSubscripts);
 
 /**
  *
- * @brief A special two dimensions case that converts linear index into subscripts. 
+ * @brief A special case of two dimensions array that converts linear index into subscripts. 
+ * The linear index traverses columns, then rows, then higher dimensions. The index starts
+ * from 0, and the subscripts start from (0, 0).
  *
  * @param[in] arrayOfDimensions where each element represents the number of rows and 
  * columns respectively.
@@ -44,6 +48,6 @@ int sub2ind2D(const int *arrayOfDimensions, const int *arrayOfSubscripts);
  * @warning Ensure that the @paramname{arrayOfDimensions} and @paramname{convertedIndex} 
  * have the same dimensions, in order to get a proper result.
  */
-void ind2sub2D(const int *arrayOfDimensions, const int index, int convertedIndex[]);
+void ind2sub2DFlip0(const int *arrayOfDimensions, const int index, int convertedIndex[]);
 
 #endif
