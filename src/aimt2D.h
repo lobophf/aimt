@@ -25,6 +25,7 @@
  * @warning Ensure that the @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * have the same dimensions, in order to get a proper result.
  */
+
 int sub2ind2DFlip0(const int *arrayOfDimensions, const int *arrayOfSubscripts);
 
 /**
@@ -48,6 +49,8 @@ int sub2ind2DFlip0(const int *arrayOfDimensions, const int *arrayOfSubscripts);
  * @warning Ensure that the @paramname{arrayOfDimensions} and @paramname{convertedIndex} 
  * have the same dimensions, in order to get a proper result.
  */
+
 void ind2sub2DFlip0(const int *arrayOfDimensions, const int index, int convertedIndex[]);
+
 
 #endif
