@@ -7,9 +7,9 @@
 
 /**
  *
- * @brief Converts subscripts into linear indices. The linear index traverses columns, 
- * then rows, then higher dimensions. The index starts from 0, and the subscripts start 
- * from (0, ..., 0).
+ * @brief Converts subscripts into linear indices. The linear index traverses rows, 
+ * then columns, then higher dimensions. The index starts from 1, and the subscripts start 
+ * from (1, ..., 1).
  *
  * @param[in] arrayOfDimensions where each element represents the size of each array 
  * dimension. 
@@ -24,7 +24,7 @@
  * @warning Ensure that @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * share the same @paramname{dimension}, in order to get a proper result.
  */
-int sub2indFlip0(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
+int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
 
 /** 
  *

@@ -1,16 +1,13 @@
 #include "aimt.h"
 
-int sub2indFlip0(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
-	inspectSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions);
-	inspectArraySize(dimensions);
+int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
+//	inspectSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions);
+//	inspectArraySize(dimensions);
 	int subscriptPosition = dimensions - 1;
-	int value = 0;
-	value += sub2ind2DFlip0(arrayOfDimensions, arrayOfSubscripts);  
-	if(subscriptPosition > 1){
-		for(int i = subscriptPosition; i > 1; i--){
-			int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, i);
-			value += arrayOfSubscripts[i] * hypoDimensionsProduct; 
-		}
+	int value = 1;
+	for(int i = subscriptPosition; i >= 0; i--){
+		int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, i);
+		value += (arrayOfSubscripts[i] - 1) * hypoDimensionsProduct; 
 	}
 	return value;
 }
