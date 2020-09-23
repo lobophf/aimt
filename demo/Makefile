@@ -6,7 +6,7 @@ SRCDIR := ../src
 ROOTTARGET := ../bin
 TARGET := $(ROOTTARGET)/demos_bin
 SRCOBJ := $(BUILDDIR)/dimensionsProduct.o $(BUILDDIR)/errorsHandler.o \
-	$(BUILDDIR)/aimt.o $(BUILDDIR)/aimt2D.o
+	$(BUILDDIR)/aimt.o
 
 # compile the demo apps
 all: demo_ind2sub.out demo_sub2ind.out
@@ -27,11 +27,8 @@ demo_sub2ind.o: $(BUILDDIR) aimt.o
 
 
 # build the source objects
-aimt.o: $(BUILDDIR) errorsHandler.o dimensionsProduct.o aimt2D.o
+aimt.o: $(BUILDDIR) errorsHandler.o dimensionsProduct.o
 	$(CC) -c -o $(BUILDDIR)/aimt.o $(SRCDIR)/aimt.c
-
-aimt2D.o: $(BUILDDIR) errorsHandler.o dimensionsProduct.o
-	$(CC) -c -o $(BUILDDIR)/aimt2D.o $(SRCDIR)/aimt2D.c
 
 dimensionsProduct.o:
 	$(CC) -c -o $(BUILDDIR)/dimensionsProduct.o $(SRCDIR)/dimensionsProduct.c

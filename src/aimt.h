@@ -3,7 +3,6 @@
 
 #include "errorsHandler.h"
 #include "dimensionsProduct.h"
-#include "aimt2D.h"
 
 /**
  *
