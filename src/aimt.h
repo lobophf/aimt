@@ -34,9 +34,9 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
 
 /**
  *
- * @brief Converts linear index into subscripts. The linear index traverses columns, 
- * then rows, then higher dimensions. The index starts from 0, and the subscripts start 
- * from (0, ..., 0).
+ * @brief Converts linear index into subscripts. The linear index traverses rows, 
+ * then columns, then higher dimensions. The index starts from 1, and the subscripts start 
+ * from (1, ..., 1).
  *
  * @param[in] arrayOfDimensions where each element represents the number of rows and 
  * columns respectively.
@@ -50,7 +50,7 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
  * @warning Ensure that @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * share the same @paramname{dimension}, in order to get a proper result.
  */
-void ind2subFlip0(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]);
+void ind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]);
 
 /** 
  *

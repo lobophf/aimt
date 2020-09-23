@@ -12,16 +12,14 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
 	return value;
 }
 
-void ind2subFlip0(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]){  
-	inspectIndex(arrayOfDimensions, index, dimensions);
-	inspectArraySize(dimensions);
+void ind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]){
+//	inspectIndex(arrayOfDimensions, index, dimensions);
+//	inspectArraySize(dimensions);
 	int subscriptPosition = dimensions - 1;
-	if(subscriptPosition < 2){
-		ind2sub2DFlip0(arrayOfDimensions, index, convertedIndex);
-	}else{
+	if(subscriptPosition >= 0){
 		int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, subscriptPosition);
-		convertedIndex[subscriptPosition] = index / hypoDimensionsProduct;	
-		int newIndex = index % hypoDimensionsProduct;
-		ind2subFlip0(arrayOfDimensions, subscriptPosition, newIndex, convertedIndex);
+		convertedIndex[subscriptPosition] = 1 + (index - 1) / hypoDimensionsProduct;
+		int newIndex = 1 + (index - 1) % hypoDimensionsProduct;
+		ind2sub(arrayOfDimensions, subscriptPosition, newIndex, convertedIndex);
 	}
 }

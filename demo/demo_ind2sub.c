@@ -6,37 +6,37 @@
 3x5x4 array sections filled with its 
 indexes in each respective position.
 
-dim3 = 0
- 0  1  2  3  4
- 5  6  7  8  9
-10 11 12 13 14
-
 dim3 = 1
-15 16 17 18 19
-20 21 22 23 24
-25 26 27 28 29
+ 1  4  7 10 13
+ 2  5  8 11 14
+ 3  6  9 12 15
 
 dim3 = 2
-30 31 32 33 34
-35 36 37 38 39
-40 41 42 43 44
+16 19 22 25 28
+17 20 23 26 29
+18 21 24 27 30
 
 dim3 = 3
-45 46 47 48 49
-50 51 52 53 54
-55 56 57 58 59
+31 34 37 40 43
+32 35 38 41 44
+33 36 39 42 45
+
+dim3 = 3
+46 49 52 55 58
+47 50 53 56 59
+48 51 54 57 60
 
 */
 
 int main(){
 
 	int arr[] = {3, 5, 4};
-	int index = 38;
+	int index = 47;
 
 	int size = sizeof(arr)/sizeof(arr[0]);
 
 	int sub[size];
-	ind2subFlip0(arr, size, index, sub);
+	ind2sub(arr, size, index, sub);
 
 	printf("The linear index %d was converted"
 	       " to subscripts (%d, %d, %d) of a"
