@@ -1,8 +1,7 @@
 #include "aimt.h"
 
 int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
-//	inspectSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions);
-//	inspectArraySize(dimensions);
+	inspectSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions);
 	int subscriptPosition = dimensions - 1;
 	int value = 1;
 	for(int i = subscriptPosition; i >= 0; i--){
@@ -13,8 +12,7 @@ int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const in
 }
 
 void ind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]){
-//	inspectIndex(arrayOfDimensions, index, dimensions);
-//	inspectArraySize(dimensions);
+	inspectIndex(arrayOfDimensions, index, dimensions);
 	int subscriptPosition = dimensions - 1;
 	if(subscriptPosition >= 0){
 		int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, subscriptPosition);
