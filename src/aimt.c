@@ -1,9 +1,9 @@
 #include "aimt.h"
 
-int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
+long long sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
 	inspectSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions);
 	int subscriptPosition = dimensions - 1;
-	int value = 1;
+	long long value = 1;
 	for(int i = subscriptPosition; i >= 0; i--){
 		int hypoDimensionsProduct = calculateDimensionsProduct(arrayOfDimensions, i);
 		value += (arrayOfSubscripts[i] - 1) * hypoDimensionsProduct; 

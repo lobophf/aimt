@@ -23,7 +23,7 @@
  * @warning Ensure that @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * share the same @paramname{dimension}, in order to get a proper result.
  */
-int sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
+long long sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
 
 /** 
  *
