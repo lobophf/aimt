@@ -16,7 +16,7 @@ not rules. So, use your best judgment, and feel free to propose changes, includi
 
 
 ## What should I know before I get started?
-The Aimt is an array index mapping tool. The Aimt is an open-source project that contains two main functions 
+The Aimt is an array index mapping tool. This is an open-source project that contains two main functions 
 ind2sub and sub2ind, which interconvert between index and subscripts. This simple tool was designed to be 
 incorporated into C codes, and therefore is compatible with C++ as well. 
 
