@@ -23,9 +23,9 @@ incorporated into C codes, and therefore is compatible with C++ as well.
 ## How Can I Contribute?
 ### Reporting bugs
 If you run into an error or bug with the project:
-Open an Issue at https://github.com/lobophf/aimt/issues
-Include reproduction steps that someone else can follow to recreate the bug or error on their own.
-Provide details like operating system and compiler versions.
+* Open an Issue at https://github.com/lobophf/aimt/issues
+* Include reproduction steps that someone else can follow to recreate the bug or error on their own.
+* Provide details like operating system and compiler versions.
 
 ### Developing Aimt
 So you wanna contribute! Awesome! This project uses GitHub to manage contributions, so you can fork this repository, make your changes, push your changes in a side branch, and finally create a pull request.
