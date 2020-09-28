@@ -12,10 +12,10 @@ language and operates by performing multidimensional conversions. As the [Matlab
 
 ## Getting Started
 
-The **sub2ind** function, converts subscripts into linear indices. The array index traverses rows, then columns, then higher dimensions. 
-The index starts from 1, and the subscripts start from (1, ..., 1).
+In the **sub2ind** and **ind2sub** functions, the array index traverses rows, then columns, then higher dimensions. The index starts from 1, and the subscripts start from (1, ..., 1).
 
-For example, let's say that we have a 5x4 matrix, and we want to get the index from position (4, 3). Then, we code:
+#### sub2ind
+For example, let's use the **sub2ind** function to get the position index (4, 3) in a 5x4 matrix. So, we coded:
 
 ```C
 int myMatrixDimensions[] = {5, 4}; 
