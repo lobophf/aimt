@@ -49,3 +49,7 @@ int main (int argc, char *argv[]){
   return 0;
 }
 ```
+
+## Contributing
+
+I'm so glad when I see improvements done by other people. Feel free to contribute by opening pull requests with improvements, fixing bugs or typing mistakes, or even open an issue to report errors. See some useful stuff in [CONTRIBUTION.md](https://github.com/lobophf/aimt/blob/documentation/CONTRIBUTION.md)
