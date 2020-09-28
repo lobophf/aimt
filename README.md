@@ -27,7 +27,7 @@ int linearIndex = sub2ind(myMatrixDimensions, mySubscripts, arraySize);
 
  > **ind2sub**
 
-On the other hand, we can use **ind2sub** function to move in the opposite way. For example, in a 5x4 matrix, one linear index is 14, and we can get this subscripts form coding like this:
+On the other hand, we can use **ind2sub** function to move in the opposite way. For example, in a 5x4 matrix, one linear index is 14, and we can get these subscripts form coding like this:
 
 ```C
 int myMatrixDimensions[] = {5, 4}; 
