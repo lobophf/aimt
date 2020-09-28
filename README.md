@@ -39,7 +39,7 @@ ind2sub(myMatrixDimensions, arraySize, myIndex, mySubscripts);
 See the [demos folder](https://github.com/lobophf/aimt/tree/master/demo) for complete examples.
 
 ## Installation
-Just copy the [src folder](https://github.com/lobophf/aimt/tree/master/src) into your project and add the [include](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html) directive.
+Just copy the [src folder](https://github.com/lobophf/aimt/tree/master/src) into your project and add the [aimt.h](https://github.com/lobophf/aimt/blob/master/src/aimt.h) file by the [include](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html) directive.
 
 ``` C
 #include "../src/aimt.h"
