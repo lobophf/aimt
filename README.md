@@ -14,7 +14,8 @@ language and operates by performing multidimensional conversions. As the [Matlab
 
 In the **sub2ind** and **ind2sub** functions, the array index traverses rows, then columns, then higher dimensions. The index starts from 1, and the subscripts start from (1, ..., 1).
 
-#### sub2ind
+ > **sub2ind**
+
 For example, let's use the **sub2ind** function to get the position index (4, 3) in a 5x4 matrix. So, we coded:
 
 ```C
