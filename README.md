@@ -2,7 +2,7 @@
 
 Aimt is an array index mapping tool used to interconvert between index and subscripts. This open-source project is written in [C 
 language](https://en.wikipedia.org/wiki/C_(programming_language)) and operates by performing multidimensional conversions. As the [Matlab](https://www.mathworks.com/) and 
-[Octave Forge](https://octave.sourceforge.io/), there are two functions for mapping array indexes: the **sub2ind** and **ind2sub**.
+[Octave Forge](https://octave.sourceforge.io/), there are two functions to mapping array indexes: the **sub2ind** and **ind2sub**.
 
 
 <p align="center">
@@ -27,7 +27,7 @@ int linearIndex = sub2ind(myMatrixDimensions, mySubscripts, arraySize);
 
  > **ind2sub**
 
-On the other hand, we can use **ind2sub** function to move in the opposite way. For exemple, in a 5x4 matrix, one linear index is 14, and we can get this subscripts form coding like this:
+On the other hand, we can use **ind2sub** function to move in the opposite way. For example, in a 5x4 matrix, one linear index is 14, and we can get this subscripts form coding like this:
 
 ```C
 int myMatrixDimensions[] = {5, 4}; 
@@ -36,3 +36,4 @@ int arraySize = sizeof(myMatrixDimensions)/sizeof(myMatrixDimensions[0]);
 int mySubscripts[arraySize];
 ind2sub(myMatrixDimensions, arraySize, myIndex, mySubscripts);
 ```
+See the [demos](https://github.com/lobophf/aimt/tree/master/demo) folder for complete examples.
