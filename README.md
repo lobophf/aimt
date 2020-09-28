@@ -36,4 +36,16 @@ int arraySize = sizeof(myMatrixDimensions)/sizeof(myMatrixDimensions[0]);
 int mySubscripts[arraySize];
 ind2sub(myMatrixDimensions, arraySize, myIndex, mySubscripts);
 ```
-See the [demos](https://github.com/lobophf/aimt/tree/master/demo) folder for complete examples.
+See the [demos folder](https://github.com/lobophf/aimt/tree/master/demo) for complete examples.
+
+## Installation
+Just copy the [src folder](https://github.com/lobophf/aimt/tree/master/src) into your project and add the [include](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html) directive.
+
+``` C
+#include "../src/aimt.h"
+
+int main (int argc, char *argv[]){
+  // stuffs to do...
+  return 0;
+}
+```
