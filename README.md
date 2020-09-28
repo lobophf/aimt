@@ -18,8 +18,8 @@ The index starts from 1, and the subscripts start from (1, ..., 1).
 For example, let's say that we have a 5x4 matrix, and we want to get the index from position (4, 3). Then, we code:
 
 ```C
-int myMatrix[] = {5, 4}; 
+int myMatrixDimensions[] = {5, 4}; 
 int mySubscripts[] = {4, 3}; // index = 14
-int elementsAmount = sizeof(myMatrix)/sizeof(myMatrix[0]);
-int linearIndex = sub2ind(myMatrix, mySubscripts, elementsAmount);
+int arraySize = sizeof(myMatrixDimensions)/sizeof(myMatrixDimensions[0]);
+int linearIndex = sub2ind(myMatrixDimensions, mySubscripts, arraySize);
 ```
