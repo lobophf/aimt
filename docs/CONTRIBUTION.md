@@ -1,6 +1,6 @@
 # Contributing to Aimt
 
-First off, thanks for your interest in contributing to Aimt! We appreciate the contributions of all types. 
+First off, thanks for your interest in contributing to Aimt! I appreciate the contributions of all types. 
 See the table of contents for different ways to help and details about this project. These are mostly guidelines, 
 not rules. So, use your best judgment, and feel free to propose changes, including in this document.
 
