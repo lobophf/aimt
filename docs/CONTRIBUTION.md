@@ -17,13 +17,13 @@ not rules. So, use your best judgment, and feel free to propose changes, includi
 
 ## What should I know before I get started?
 The Aimt is an array index mapping tool. This is an open-source project that contains two main functions 
-ind2sub and sub2ind, which interconvert between index and subscripts. This simple tool was designed to be 
+**ind2sub** and **sub2ind**, which interconvert between index and subscripts. This simple tool was designed to be 
 incorporated into C codes, and therefore is compatible with C++ as well. 
 
 ## How Can I Contribute?
 ### Reporting bugs
 If you run into an error or bug with the project:
-* Open an Issue at https://github.com/lobophf/aimt/issues
+* Open an issue at https://github.com/lobophf/aimt/issues
 * Include reproduction steps that someone else can follow to recreate the bug or error on their own.
 * Provide details like operating system and compiler versions.
 
