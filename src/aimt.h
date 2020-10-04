@@ -4,6 +4,16 @@
 #include "errorsHandler.h"
 #include "dimensionsProduct.h"
 
+#define sub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions) ({ \
+	inspectSubscripts(__FILE__, __LINE__, arrayOfDimensions, arrayOfSubscripts, dimensions); \
+	Isub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions); \
+})
+
+#define ind2sub(arrayOfDimensions, dimensions, index, convertedIndex) ({ \
+	inspectIndex(__FILE__, __LINE__, arrayOfDimensions, index, dimensions); \
+	Iind2sub(arrayOfDimensions, dimensions, index, convertedIndex); \
+})
+
 /**
  *
  * @brief Converts subscripts into linear indices. The linear index traverses rows, 
@@ -23,7 +33,7 @@
  * @warning Ensure that @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * share the same @paramname{dimension}, in order to get a proper result.
  */
-long long sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
+long long Isub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
 
 /** 
  *
@@ -49,7 +59,7 @@ long long sub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, co
  * @warning Ensure that @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * share the same @paramname{dimension}, in order to get a proper result.
  */
-void ind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]);
+void Iind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]);
 
 /** 
  *
