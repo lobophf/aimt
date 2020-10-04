@@ -1,12 +1,12 @@
 #include "errorsHandler.h"
 
-void callErrorMessage(int errorNumber){
+void callErrorMessage(int errorNumber, const char *fileName, const int codeLine){
 	switch(errorNumber){
 		case 1:
-		    printf("ERROR: The subscripts provide must be contained within a valid bound.");
+		    printf("Error from sub2ind function at %s:%d -- The subscripts provide must be contained within a valid bound.", fileName, codeLine);
 		    break;
 		case 2:
-		    printf("ERROR: The index provide must be contained within a valid bound.");
+		    printf("Error from ind2sub function at %s:%d -- The index provide must be contained within a valid bound.", fileName, codeLine);
 		    break;
 		default:
 		    printf("Unknown error");
@@ -30,16 +30,16 @@ int isValidIndex(const int *arrayOfDimensions, const int index, const int dimens
 	return 1;
 }
 
-void inspectSubscripts(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
+void inspectSubscripts(const char *fileName, const int codeLine, const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
 	if(!isValidArrayOfSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions)){
-		callErrorMessage(1);
+		callErrorMessage(1, fileName, codeLine);
 		exit(EXIT_FAILURE);
 	}
 }
 
-void inspectIndex(int const *arrayOfDimensions, int const index, int const dimension){
+void inspectIndex(const char *fileName, const int codeLine, int const *arrayOfDimensions, int const index, int const dimension){
 	if(!isValidIndex(arrayOfDimensions, index, dimension)){
-		callErrorMessage(2);
+		callErrorMessage(2, fileName, codeLine);
 		exit(EXIT_FAILURE);
 	}
 }
