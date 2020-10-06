@@ -52,7 +52,7 @@ int main (int argc, char *argv[]){
 
 ## Contributing
 
-I'm so glad when I see improvements done by other people. Feel free to contribute by opening pull requests with improvements, fixing bugs or typing mistakes, or even open an issue to report errors. See some useful stuffs in [CONTRIBUTION.md](https://github.com/lobophf/aimt/blob/master/docs/CONTRIBUTION.md)
+I'm so glad when I see improvements done by other people. Feel free to contribute by opening pull requests with improvements, fixing bugs or typing mistakes, or even open an issue to report errors. See some useful stuffs in [Contributing guide](https://github.com/lobophf/aimt/blob/master/docs/CONTRIBUTING.md)
 
 ## License
 
