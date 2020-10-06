@@ -4,16 +4,6 @@
 #include "errorsHandler.h"
 #include "dimensionsProduct.h"
 
-#define sub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions) ({ \
-	inspectSubscripts(__FILE__, __LINE__, arrayOfDimensions, arrayOfSubscripts, dimensions); \
-	Isub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions); \
-})
-
-#define ind2sub(arrayOfDimensions, dimensions, index, convertedIndex) ({ \
-	inspectIndex(__FILE__, __LINE__, arrayOfDimensions, index, dimensions); \
-	Iind2sub(arrayOfDimensions, dimensions, index, convertedIndex); \
-})
-
 /**
  *
  * @brief Converts subscripts into linear indices. The linear index traverses rows, 
@@ -28,12 +18,14 @@
  * @paramname{arrayOfSubscripts}.
  * @return a converted linear index.
  *
- * @pre The parameter @paramname{dimensions} must be greater than or equal to 2. 
- *
  * @warning Ensure that @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * share the same @paramname{dimension}, in order to get a proper result.
  */
-long long Isub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
+
+#define sub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions) ({ \
+	inspectSubscripts(__FILE__, __LINE__, arrayOfDimensions, arrayOfSubscripts, dimensions); \
+	Isub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions); \
+})
 
 /** 
  *
@@ -59,11 +51,20 @@ long long Isub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, c
  * @warning Ensure that @paramname{arrayOfDimensions} and @paramname{arrayOfSubscripts} 
  * share the same @paramname{dimension}, in order to get a proper result.
  */
-void Iind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]);
+
+#define ind2sub(arrayOfDimensions, dimensions, index, convertedIndex) ({ \
+	inspectIndex(__FILE__, __LINE__, arrayOfDimensions, index, dimensions); \
+	Iind2sub(arrayOfDimensions, dimensions, index, convertedIndex); \
+})
 
 /** 
  *
  * @example demo_ind2sub.c
  * This is an example of how to use the ind2sub function.
  */
+
+long long Isub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
+
+void Iind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]);
+
 #endif
