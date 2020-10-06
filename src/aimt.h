@@ -10,8 +10,9 @@
  * then columns, then higher dimensions. The index starts from 1, and the subscripts start 
  * from (1, ..., 1).
  *
- * @param[in] arrayOfDimensions where each element represents the size of each array 
- * dimension. 
+ * @param[in] arrayOfDimensions where each element represents the is the size of the array 
+ * in the respective dimension.
+ *
  * @param[in] arrayOfSubscripts in which the set of its elements form the position to be 
  * converted.
  * @param[in] dimensions is size of the @paramname{arrayOfDimensions} and 
@@ -39,8 +40,8 @@
  * then columns, then higher dimensions. The index starts from 1, and the subscripts start 
  * from (1, ..., 1).
  *
- * @param[in] arrayOfDimensions where each element represents the number of rows and 
- * columns respectively.
+ * @param[in] arrayOfDimensions where each element represents the is the size of the array 
+ * in the respective dimension.
  * @param[in] dimensions is size of the @paramname{arrayOfDimensions} and 
  * @paramname{convertedIndex}.
  * @param[in] index to be converted.
