@@ -44,7 +44,7 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "lalaala"
+PROJECT_BRIEF          = "Array index mapping tool for C language"
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -710,6 +710,7 @@ ENABLED_SECTIONS       =
 # Minimum value: 0, maximum value: 10000, default value: 30.
 
 MAX_INITIALIZER_LINES  = 0
+
 # Set the SHOW_USED_FILES tag to NO to disable the list of files generated at
 # the bottom of the documentation of classes and structs. If set to YES, the
 # list will mention the files that were used to generate the documentation.
