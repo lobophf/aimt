@@ -30,17 +30,17 @@ dim3 = 4
 
 int main(){
 
-	int arr[] = {3, 5, 4};
-	int index = 47;
+	unsigned int arr[] = {3, 5, 4};
+	unsigned index = 47;
 
-	int size = sizeof(arr)/sizeof(arr[0]);
+	unsigned int size = sizeof(arr)/sizeof(arr[0]);
 
-	int sub[size];
+	unsigned sub[size];
 	ind2sub(arr, size, index, sub);
 
-	printf("The linear index %d was converted"
-	       " to subscripts (%d, %d, %d) of a"
-	       " %dx%dx%d array.\n", index, sub[0], 
+	printf("The linear index %u was converted"
+	       " to subscripts (%u, %u, %u) of a"
+	       " %ux%ux%u array.\n", index, sub[0], 
 	       sub[1], sub[2], arr[0], arr[1], 
 	       arr[2]);
 		       

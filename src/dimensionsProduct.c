@@ -1,7 +1,7 @@
 #include "dimensionsProduct.h"
 
-int calculateDimensionsProduct(const int *arrayOfDimensions, const int subscriptPosition){
-	int dimensionsProduct = 1;
+unsigned int calculateDimensionsProduct(unsigned const int *arrayOfDimensions, unsigned const int subscriptPosition){
+	unsigned int dimensionsProduct = 1;
 	for(int i = 0; i < subscriptPosition; i++){
 		dimensionsProduct *= arrayOfDimensions[i];
 	}

@@ -24,6 +24,7 @@
  */
 
 #define sub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions) ({ \
+	inspectArrayOfDimensions(__FILE__, __LINE__, arrayOfDimensions, dimensions); \
 	inspectSubscripts(__FILE__, __LINE__, arrayOfDimensions, arrayOfSubscripts, dimensions); \
 	Isub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions); \
 })
@@ -54,6 +55,7 @@
  */
 
 #define ind2sub(arrayOfDimensions, dimensions, index, convertedIndex) ({ \
+	inspectArrayOfDimensions(__FILE__, __LINE__, arrayOfDimensions, dimensions); \
 	inspectIndex(__FILE__, __LINE__, arrayOfDimensions, index, dimensions); \
 	Iind2sub(arrayOfDimensions, dimensions, index, convertedIndex); \
 })
@@ -64,8 +66,7 @@
  * This is an example of how to use the ind2sub function.
  */
 
-long long Isub2ind(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions);
-
-void Iind2sub(const int *arrayOfDimensions, const int dimensions, const int index, int convertedIndex[]);
+unsigned int Isub2ind(unsigned const int *arrayOfDimensions, unsigned const int *arrayOfSubscripts, unsigned const int dimensions);
+void Iind2sub(unsigned const int *arrayOfDimensions, unsigned const int dimensions, unsigned const int index, unsigned int convertedIndex[]);
 
 #endif
