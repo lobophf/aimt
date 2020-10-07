@@ -13,7 +13,7 @@ void callErrorMessage(int errorNumber, const char *fileName, const int codeLine)
 	}
 }
 
-int isValidArrayOfSubscripts(const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
+int isValidArrayOfSubscripts(unsigned const int *arrayOfDimensions, unsigned const int *arrayOfSubscripts, unsigned const int dimensions){
 	for(int i = 0; i < dimensions; i++){
 		if(arrayOfSubscripts[i] < 1 || arrayOfSubscripts[i] > arrayOfDimensions[i]){
 			return 0;
@@ -22,22 +22,22 @@ int isValidArrayOfSubscripts(const int *arrayOfDimensions, const int *arrayOfSub
 	return 1;
 }
 
-int isValidIndex(const int *arrayOfDimensions, const int index, const int dimensions){
-	int maxValue = calculateDimensionsProduct(arrayOfDimensions, dimensions);
+int isValidIndex(unsigned const int *arrayOfDimensions, unsigned const int index, unsigned const int dimensions){
+	unsigned int maxValue = calculateDimensionsProduct(arrayOfDimensions, dimensions);
 	if(index < 1 || index > maxValue){
 		return 0;
 	}
 	return 1;
 }
 
-void inspectSubscripts(const char *fileName, const int codeLine, const int *arrayOfDimensions, const int *arrayOfSubscripts, const int dimensions){
+void inspectSubscripts(const char *fileName, const int codeLine, unsigned const int *arrayOfDimensions, unsigned const int *arrayOfSubscripts, unsigned const int dimensions){
 	if(!isValidArrayOfSubscripts(arrayOfDimensions, arrayOfSubscripts, dimensions)){
 		callErrorMessage(1, fileName, codeLine);
 		exit(EXIT_FAILURE);
 	}
 }
 
-void inspectIndex(const char *fileName, const int codeLine, int const *arrayOfDimensions, int const index, int const dimension){
+void inspectIndex(const char *fileName, const int codeLine, unsigned const int *arrayOfDimensions, unsigned const int index, unsigned const int dimension){
 	if(!isValidIndex(arrayOfDimensions, index, dimension)){
 		callErrorMessage(2, fileName, codeLine);
 		exit(EXIT_FAILURE);

@@ -30,16 +30,16 @@ dim3 = 4
 
 int main(){
 	// array with 3 rows and 5 columns.
-	int arr[] = {3, 5, 4};
+	unsigned int arr[] = {3, 5, 4};
 
 	// subscript to be converted.
-	int sub[] = {2, 1, 4}; //47
+	unsigned int sub[] = {2, 1, 4}; //47
 	
 	// size of arr.
-	int arrSize = sizeof(arr)/sizeof(arr[0]);
+	unsigned int arrSize = sizeof(arr)/sizeof(arr[0]);
 
 	// converted subscript
-	int linearIndex = sub2ind(arr, sub, arrSize);
+	unsigned int linearIndex = sub2ind(arr, sub, arrSize);
 
 	printf("The subscripts (%d, %d, %d) of a"
 	       " %dx%dx%d array was converted to"
