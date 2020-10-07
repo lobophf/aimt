@@ -41,9 +41,9 @@ int main(){
 	// converted subscript
 	unsigned int linearIndex = sub2ind(arr, sub, arrSize);
 
-	printf("The subscripts (%d, %d, %d) of a"
-	       " %dx%dx%d array was converted to"
-	       " linear index %d.\n", sub[0], sub[1], 
+	printf("The subscripts (%u, %u, %u) of a"
+	       " %ux%ux%u array was converted to"
+	       " linear index %u.\n", sub[0], sub[1], 
 	       sub[2], arr[0], arr[1], arr[2], linearIndex);
 
 	return 0;
