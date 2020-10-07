@@ -24,6 +24,7 @@
  */
 
 #define sub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions) ({ \
+	inspectArrayOfDimensions(__FILE__, __LINE__, arrayOfDimensions, dimensions); \
 	inspectSubscripts(__FILE__, __LINE__, arrayOfDimensions, arrayOfSubscripts, dimensions); \
 	Isub2ind(arrayOfDimensions, arrayOfSubscripts, dimensions); \
 })
@@ -54,6 +55,7 @@
  */
 
 #define ind2sub(arrayOfDimensions, dimensions, index, convertedIndex) ({ \
+	inspectArrayOfDimensions(__FILE__, __LINE__, arrayOfDimensions, dimensions); \
 	inspectIndex(__FILE__, __LINE__, arrayOfDimensions, index, dimensions); \
 	Iind2sub(arrayOfDimensions, dimensions, index, convertedIndex); \
 })
