@@ -1,7 +1,7 @@
 # Aimt
 
 Aimt is an array index mapping tool used to interconvert between index and subscripts. This open-source project is written in [C 
-language](https://en.wikipedia.org/wiki/C_(programming_language)) and operates by performing multidimensional conversions. As we see in [Matlab](https://www.mathworks.com/) and 
+language](https://en.wikipedia.org/wiki/C_(programming_language)) and performs multidimensional conversions. As we see in [Matlab](https://www.mathworks.com/) and 
 [Octave Forge](https://octave.sourceforge.io/), there are two functions to mapping array indexes: the **sub2ind** and **ind2sub**.
 
 
@@ -12,7 +12,7 @@ language](https://en.wikipedia.org/wiki/C_(programming_language)) and operates b
 
 ## Getting Started
 
-In the **sub2ind** and **ind2sub** functions, the array index traverses rows, then columns, and then higher dimensions. The index starts from 1, and the subscripts start from (1, ..., 1).
+In the **sub2ind** and **ind2sub** functions, the array index traverses rows, then columns, and then higher dimensions. The index starts from 1, and the subscripts start from (1, ..., 1). Right below are basic examples of how these functions work.
 
  > **sub2ind**
 
@@ -39,7 +39,11 @@ ind2sub(myMatrixDimensions, arraySize, myIndex, mySubscripts);
 See the [demos folder](https://github.com/lobophf/aimt/tree/master/demo) for complete examples. The [Makefile](https://github.com/lobophf/aimt/blob/master/demo/Makefile) shows how to link and compile all files.
 
 ## Installation
-Just copy the [src folder](https://github.com/lobophf/aimt/tree/master/src) into your project and add the [aimt.h](https://github.com/lobophf/aimt/blob/master/src/aimt.h) file by the [include](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html) directive.
+Keep in mind this tool is under development and was tested only in the Unix environment for the [GCC](https://gcc.gnu.org/) 
+9.3.0 compiler.
+If you want to add it to your project, go ahead and copy the [src folder](https://github.com/lobophf/aimt/tree/master/src) folder 
+into your project and add the [aimt.h](https://github.com/lobophf/aimt/blob/master/src/aimt.h) file by the 
+[include](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html) directive.
 
 ``` C
 #include "../src/aimt.h"
