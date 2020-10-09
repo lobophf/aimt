@@ -41,8 +41,8 @@ See the [demos folder](https://github.com/lobophf/aimt/tree/master/demo) for com
 ## Installation
 Keep in mind this tool is under development and was tested only in the Unix environment for the [GCC](https://gcc.gnu.org/) 
 9.3.0 compiler.
-If you want to use it, go ahead and copy the [src folder](https://github.com/lobophf/aimt/tree/master/src) folder 
-into your project and add the [aimt.h](https://github.com/lobophf/aimt/blob/master/src/aimt.h) file by the 
+If you want to use it, go ahead and copy the [src folder](https://github.com/lobophf/aimt/tree/master/src) into your project
+and add the [aimt.h](https://github.com/lobophf/aimt/blob/master/src/aimt.h) file by the 
 [include](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html) directive.
 
 ``` C
