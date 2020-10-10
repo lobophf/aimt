@@ -16,7 +16,7 @@ In the **sub2ind** and **ind2sub** functions, the array index traverses rows, th
 
  > **sub2ind**
 
-For example, let's use the **sub2ind** function to get a linear index form of a (4, 3) subscripts in a 5x4 matrix. So, we code:
+Let's use the **sub2ind** function to get a linear index form of a (4, 3) subscripts in a 5x4 matrix. So, we code:
 
 ```C
 int myMatrixDimensions[] = {5, 4}; 
