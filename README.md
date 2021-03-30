@@ -49,7 +49,7 @@ and add the [aimt.h](https://github.com/lobophf/aimt/blob/master/src/aimt.h) fil
 #include "../src/aimt.h"
 
 int main (int argc, char *argv[]){
-  // stuffs to do...
+  // stuff to do...
   return 0;
 }
 ```
@@ -61,5 +61,3 @@ I'm so glad when I see improvements done by other people. Feel free to contribut
 ## License
 
 Aimt is a MIT licensed, as found in the [LICENSE](https://github.com/lobophf/aimt/blob/master/LICENSE) file.
-
-
